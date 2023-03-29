@@ -1,4 +1,6 @@
-<template></template>
+<template>
+    <h1>Yu-Gi-Oh Api</h1>
+</template>
 
 
 <script>

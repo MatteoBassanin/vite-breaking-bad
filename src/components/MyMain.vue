@@ -1,7 +1,13 @@
 <template>
-    <div>
+    <div class="container">
+        <select name="" id="">
+            <option value="alien">Alien</option>
+        </select>
+        <div class="card_container d_flex">
+            <MyCard v-for=" (element, index) in store.cardListArray" :key='index' :name="element.name"
+                :image="element.card_images[0].image_url"></MyCard>
 
-        <MyCard v-for=" (element, index) in store.cardListArray" :key='index' :name="element.name"></MyCard>
+        </div>
 
     </div>
 </template>
@@ -25,4 +31,14 @@ export default {
 </script>
 
 
-<style scoped></style>
+<style scoped>
+.container {
+    background-color: #D28E3E;
+    height: 100%;
+    width: 100vw;
+}
+
+.card_container {
+    background-color: white;
+}
+</style>

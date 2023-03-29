@@ -1,5 +1,6 @@
 <template>
   <MyHeader></MyHeader>
+  <MyMain></MyMain>
 </template>
 
 
