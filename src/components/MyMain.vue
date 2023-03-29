@@ -1,9 +1,10 @@
 <template>
     <div class="container">
+
         <select name="" id="">
             <option value="alien">Alien</option>
         </select>
-        <div class="card_container d_flex">
+        <div class="card_container d_flex flex_wrap w_80_margin_auto pd_20">
             <MyCard v-for=" (element, index) in store.cardListArray" :key='index' :name="element.name"
                 :image="element.card_images[0].image_url"></MyCard>
 

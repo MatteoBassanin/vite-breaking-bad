@@ -17,3 +17,12 @@
 .flex_wrap {
   flex-wrap: wrap;
 }
+
+.w_80_margin_auto {
+  margin: auto;
+  width: 80%;
+}
+
+.pd_20 {
+  padding: 20px;
+}
