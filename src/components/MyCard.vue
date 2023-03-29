@@ -1,10 +1,14 @@
-<template></template>
+<template>
+    <div>{{ name }}</div>
+</template>
 
 <script>
 
 export default {
-    name: "MyCard"
-
+    name: "MyCard",
+    props: {
+        name: String,
+    }
 }
 </script>
 
