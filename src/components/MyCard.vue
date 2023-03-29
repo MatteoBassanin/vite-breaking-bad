@@ -27,7 +27,7 @@ export default {
 <style scoped>
 .big_card_wrapper {
     width: calc(100% / 5 - 20px);
-    margin: 10px;
+    margin: 0 10px 10px;
 }
 
 .card_wrapper,
