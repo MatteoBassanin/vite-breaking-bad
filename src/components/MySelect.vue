@@ -25,8 +25,8 @@ export default {
 <style scoped>
 select {
     position: relative;
-    bottom: 20px;
-    left: 190px;
+    top: 33px;
+    right: 30px;
     padding: 5px 15px;
     border-radius: 5px;
 }
