@@ -1,6 +1,6 @@
 <template>
-    <select name="" id="" @change="$emit('selected')">
-        <option value="alien">Alien</option>
+    <select name="" id="" @change="$emit('selected')" v-model="store.selectList.value">
+        <option value=""></option>
         <option value="human">Human</option>
         <option value="alien">Alien</option>
         <option value="alien">Alien</option>
@@ -13,9 +13,18 @@
 </template>
 
 <script>
+import { store } from '../store.js';
+
 export default {
-    name: "MySelect"
+    name: "MySelect",
+
+    data() {
+        return {
+            store
+        }
+    }
 }
+
 </script>
 
 
