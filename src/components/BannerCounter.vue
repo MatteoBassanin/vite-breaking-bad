@@ -1,12 +1,26 @@
 <template>
     <div class="black_banner ">
-        <span>Found 64 cards</span>
+        <span>{{ cardsFounded }}</span>
     </div>
 </template>
 
 <script>
+import { store } from '../store.js';
+
 export default {
-    name: "BannerCounter"
+    name: "BannerCounter",
+    data() {
+        return {
+            store,
+
+
+        }
+    },
+    computed: {
+        cardsFounded() {
+            return `Found ${this.store.cardListArray.length} cards`
+        }
+    }
 }
 </script>
 

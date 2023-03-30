@@ -1,9 +1,6 @@
 <template>
     <select name="" id="" @change="$emit('selected')" v-model="store.selectList">
         <option v-for="element in archetypeArray" :value="element">{{ element }}</option>
-
-
-
     </select>
 </template>
 
