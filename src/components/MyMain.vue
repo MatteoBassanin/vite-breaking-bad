@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <MySelect @selected="prova"></MySelect>
+        <!-- <MySelect @selected="getInfoData"></MySelect> -->
         <!-- <select name="" id="">
             <option value="alien">Alien</option>
 

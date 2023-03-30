@@ -3,7 +3,7 @@
         <option value=""></option>
         <option value="human">Human</option>
         <option value="alien">Alien</option>
-        <option value="alien">Alien</option>
+        <option value="Code Talker">Code Talker</option>
         <option value="alien">Alien</option>
         <option value="alien">Alien</option>
         <option value="alien">Alien</option>

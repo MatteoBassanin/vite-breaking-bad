@@ -1,7 +1,7 @@
 <template>
   <MyLoading></MyLoading>
   <MyHeader></MyHeader>
-  <!-- <MySelect @selected="getInfoData"></MySelect> -->
+  <MySelect @selected="getInfoData"></MySelect>
   <MyMain></MyMain>
 </template>
 
@@ -35,19 +35,25 @@ export default {
   methods: {
     getInfoData() {
 
-      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?staple=yes')
+      let searchApi = "https://db.ygoprodeck.com/api/v7/cardinfo.php?staple=yes"
+
+      if (store.selectList > 0) {
+        searchApi += `?archetype=${store.selectList}`;
+      }
+      axios.get(searchApi)
         .then(response => {
           this.store.cardListArray = response.data.data;
           this.store.loading = false;
           console.log(response)
         }
         );
-
+      alert("ciao")
     }
   },
   created() {
     this.getInfoData();
-  }
+  },
+
 }
 </script>
 
