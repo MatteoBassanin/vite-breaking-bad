@@ -1,6 +1,7 @@
 <template>
   <MyLoading></MyLoading>
   <MyHeader></MyHeader>
+  <!-- <MySelect @selected="getInfoData"></MySelect> -->
   <MyMain></MyMain>
 </template>
 
@@ -11,6 +12,8 @@ import axios from 'axios';
 
 import { store } from './store.js';
 
+
+import MySelect from './components/MySelect.vue';
 import MyLoading from './components/MyLoading.vue';
 import MyHeader from './components/MyHeader.vue';
 import MyMain from './components/MyMain.vue';
@@ -21,22 +24,29 @@ export default {
     MyHeader,
     MyMain,
     MyCard,
-    MyLoading
+    MyLoading,
+    MySelect
   },
   data() {
     return {
       store
     }
   },
-  created() {
+  methods: {
+    getInfoData() {
 
-    axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?staple=yes')
-      .then(response => {
-        this.store.cardListArray = response.data.data;
-        this.store.loading = false;
-        console.log(response)
-      }
-      )
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?staple=yes')
+        .then(response => {
+          this.store.cardListArray = response.data.data;
+          this.store.loading = false;
+          console.log(response)
+        }
+        );
+
+    }
+  },
+  created() {
+    this.getInfoData();
   }
 }
 </script>
