@@ -47,7 +47,6 @@ export default {
           console.log(response)
         }
         );
-      alert("ciao")
     }
   },
   created() {
