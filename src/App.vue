@@ -38,7 +38,7 @@ export default {
       let searchApi = "https://db.ygoprodeck.com/api/v7/cardinfo.php?staple=yes"
 
       if (store.selectList.length > 0) {
-        searchApi += `?archetype=${store.selectList}`;
+        searchApi += `&archetype=${store.selectList}`;
       }
       axios.get(searchApi)
         .then(response => {
