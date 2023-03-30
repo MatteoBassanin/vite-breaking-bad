@@ -4,7 +4,7 @@
         <option value="human">Human</option>
         <option value="alien">Alien</option>
         <option value="Code Talker">Code Talker</option>
-        <option value="alien">Alien</option>
+        <option value="anti">Anti</option>
         <option value="alien">Alien</option>
         <option value="alien">Alien</option>
 
