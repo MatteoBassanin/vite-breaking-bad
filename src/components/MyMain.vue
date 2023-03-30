@@ -43,6 +43,7 @@ export default {
     methods: {
         prova() {
             alert("ciao")
+            console.log(store.selectList)
         }
     }
 }

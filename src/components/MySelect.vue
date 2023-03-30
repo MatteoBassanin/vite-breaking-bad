@@ -1,5 +1,5 @@
 <template>
-    <select name="" id="" @change="$emit('selected')" v-model="store.selectList.value">
+    <select name="" id="" @change="$emit('selected')" v-model="store.selectList">
         <option value=""></option>
         <option value="human">Human</option>
         <option value="alien">Alien</option>
