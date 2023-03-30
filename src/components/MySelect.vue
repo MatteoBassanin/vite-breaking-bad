@@ -1,12 +1,7 @@
 <template>
     <select name="" id="" @change="$emit('selected')" v-model="store.selectList">
-        <option value=""></option>
-        <option value="human">Human</option>
-        <option value="alien">Alien</option>
-        <option value="Code Talker">Code Talker</option>
-        <option value="anti">anti</option>
-        <option value="alien">Alien</option>
-        <option value="alien">Alien</option>
+        <option v-for="element in archetypeArray" :value="element">{{ element }}</option>
+
 
 
     </select>
@@ -20,7 +15,9 @@ export default {
 
     data() {
         return {
-            store
+            store,
+
+            archetypeArray: ["Human", "Alien", "Code Talker", "Anti"]
         }
     }
 }
